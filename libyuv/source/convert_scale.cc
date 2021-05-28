@@ -63,6 +63,10 @@ void NV12ToI420Scaler::NV12ToI420Scale(const uint8_t* src_y,
                     dst_height, libyuv::kFilterBox);
 }
 
+void NV12ToI420Scaler::test(uint8_t* haha) {
+    *haha = 200;
+}
+
 #ifdef __cplusplus
 }  // extern "C"
 }  // namespace libyuv

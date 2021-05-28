@@ -14,6 +14,7 @@
 #include "libyuv/basic_types.h"
 #include "libyuv/compare.h"
 #include "libyuv/convert.h"
+#include "libyuv/NV12ToI420Scaler.h"
 #include "libyuv/convert_argb.h"
 #include "libyuv/convert_from.h"
 #include "libyuv/convert_from_argb.h"

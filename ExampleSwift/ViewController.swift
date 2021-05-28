@@ -15,10 +15,15 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
 
-    let src_argb = UnsafePointer<uint8>()
-    let dst_argb = UnsafeMutablePointer<uint8>.alloc(1024)
-
-    ARGBCopy(src_argb, 0, dst_argb, 0, 0, 0)
+    let testNV12 = NV12ToI420Scaler()
+//    let ahihi = testNV12.convertNV12(toI420Scale: 8, src_stride_y: 8, src_uv: 8, src_stride_uv: 8, src_width: 8, src_height: 8, dst_y: 8, dst_stride_y: 8, dst_u: 8, dst_stride_u: 8, dst_v: 8, dst_stride_v: 8, dst_width: 8, dst_height: 8)
+//    print(ahihi)
+    
+    
+    var aha: UInt8 = 4
+    testNV12.test(&aha)
+    
+    print(aha)
   }
 
   override func didReceiveMemoryWarning() {

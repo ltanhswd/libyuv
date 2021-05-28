@@ -87,6 +87,8 @@
 		518F39E01BAEB7EA004A9A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518F39DE1BAEB7EA004A9A2B /* LaunchScreen.storyboard */; };
 		518F39E51BAEB7F1004A9A2B /* libyuv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518F39211BAEB500004A9A2B /* libyuv.framework */; };
 		518F39E61BAEB7F1004A9A2B /* libyuv.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518F39211BAEB500004A9A2B /* libyuv.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7804CB0C2660C95300093E30 /* NV12ToI420Scaler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7804CB0B2660C95300093E30 /* NV12ToI420Scaler.mm */; };
+		7804CB112660CA0700093E30 /* NV12ToI420Scaler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7804CB0A2660C94300093E30 /* NV12ToI420Scaler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78617B08265FB69E00999737 /* scale_uv.h in Headers */ = {isa = PBXBuildFile; fileRef = 78617B07265FB69E00999737 /* scale_uv.h */; };
 		78617B0E265FB71300999737 /* compare_mmi.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78617B0C265FB71300999737 /* compare_mmi.cc */; };
 		78617B0F265FB71300999737 /* compare_msa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 78617B0D265FB71300999737 /* compare_msa.cc */; };
@@ -226,6 +228,9 @@
 		518F39DC1BAEB7EA004A9A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		518F39DF1BAEB7EA004A9A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		518F39E11BAEB7EA004A9A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7804CB0A2660C94300093E30 /* NV12ToI420Scaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NV12ToI420Scaler.h; sourceTree = "<group>"; };
+		7804CB0B2660C95300093E30 /* NV12ToI420Scaler.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NV12ToI420Scaler.mm; sourceTree = "<group>"; };
+		7804CB162660CDCF00093E30 /* Test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Bridging-Header.h"; sourceTree = "<group>"; };
 		78617B07265FB69E00999737 /* scale_uv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_uv.h; sourceTree = "<group>"; };
 		78617B0C265FB71300999737 /* compare_mmi.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compare_mmi.cc; sourceTree = "<group>"; };
 		78617B0D265FB71300999737 /* compare_msa.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = compare_msa.cc; sourceTree = "<group>"; };
@@ -312,6 +317,8 @@
 				518F39941BAEB5AF004A9A2B /* version.h */,
 				518F39951BAEB5AF004A9A2B /* video_common.h */,
 				518F39261BAEB500004A9A2B /* Info.plist */,
+				7804CB0A2660C94300093E30 /* NV12ToI420Scaler.h */,
+				7804CB0B2660C95300093E30 /* NV12ToI420Scaler.mm */,
 			);
 			path = libyuv;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 				518F39B61BAEB65E004A9A2B /* Assets.xcassets */,
 				518F39B81BAEB65E004A9A2B /* LaunchScreen.storyboard */,
 				518F39BB1BAEB65E004A9A2B /* Info.plist */,
+				7804CB162660CDCF00093E30 /* Test-Bridging-Header.h */,
 			);
 			path = ExampleSwift;
 			sourceTree = "<group>";
@@ -425,6 +433,7 @@
 				518F39A51BAEB5AF004A9A2B /* scale_row.h in Headers */,
 				518F39A01BAEB5AF004A9A2B /* rotate_argb.h in Headers */,
 				518F39251BAEB500004A9A2B /* libyuv.h in Headers */,
+				7804CB112660CA0700093E30 /* NV12ToI420Scaler.h in Headers */,
 				518F399F1BAEB5AF004A9A2B /* planar_functions.h in Headers */,
 				518F39A41BAEB5AF004A9A2B /* scale_argb.h in Headers */,
 				518F39971BAEB5AF004A9A2B /* compare_row.h in Headers */,
@@ -519,7 +528,7 @@
 					};
 					518F39AC1BAEB65E004A9A2B = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7P55N2ZU6U;
+						DevelopmentTeam = K7QML4D3NY;
 					};
 					518F39CD1BAEB7EA004A9A2B = {
 						CreatedOnToolsVersion = 7.0;
@@ -591,6 +600,7 @@
 				518F39671BAEB581004A9A2B /* mjpeg_validate.cc in Sources */,
 				518F39621BAEB581004A9A2B /* convert_jpeg.cc in Sources */,
 				518F39801BAEB581004A9A2B /* scale_neon64.cc in Sources */,
+				7804CB0C2660C95300093E30 /* NV12ToI420Scaler.mm in Sources */,
 				518F39751BAEB581004A9A2B /* row_mips.cc in Sources */,
 				518F395B1BAEB581004A9A2B /* compare_neon.cc in Sources */,
 				518F39701BAEB581004A9A2B /* rotate_neon64.cc in Sources */,
@@ -838,11 +848,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K7QML4D3NY;
 				INFOPLIST_FILE = ExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.libyuv.ExampleSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libyuvfdf.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/Test-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -850,10 +863,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K7QML4D3NY;
 				INFOPLIST_FILE = ExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.libyuv.ExampleSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.libyuvfdf.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/Test-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

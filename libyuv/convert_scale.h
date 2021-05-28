@@ -23,8 +23,8 @@ extern "C" {
 // than separate NV12->I420 + I420->I420 scaling.
 class NV12ToI420Scaler {
  public:
-  NV12ToI420Scaler();
-  ~NV12ToI420Scaler();
+//  NV12ToI420Scaler();
+//  ~NV12ToI420Scaler();
   void NV12ToI420Scale(const uint8_t* src_y,
                        int src_stride_y,
                        const uint8_t* src_uv,
@@ -39,6 +39,8 @@ class NV12ToI420Scaler {
                        int dst_stride_v,
                        int dst_width,
                        int dst_height);
+    
+    void test(uint8_t* haha);
 
  private:
   std::vector<uint8_t> tmp_uv_planes_;
