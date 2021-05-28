@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B53E7926609E510038D0EA /* convert_scale.cc in Sources */ = {isa = PBXBuildFile; fileRef = 27B53E7826609E510038D0EA /* convert_scale.cc */; };
+		27B53E7C26609E730038D0EA /* convert_scale.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B53E7B26609E730038D0EA /* convert_scale.h */; };
 		518F39251BAEB500004A9A2B /* libyuv.h in Headers */ = {isa = PBXBuildFile; fileRef = 518F39241BAEB500004A9A2B /* libyuv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		518F39581BAEB581004A9A2B /* compare.cc in Sources */ = {isa = PBXBuildFile; fileRef = 518F392D1BAEB581004A9A2B /* compare.cc */; };
 		518F39591BAEB581004A9A2B /* compare_common.cc in Sources */ = {isa = PBXBuildFile; fileRef = 518F392E1BAEB581004A9A2B /* compare_common.cc */; };
@@ -140,6 +142,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27B53E7826609E510038D0EA /* convert_scale.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = convert_scale.cc; sourceTree = "<group>"; };
+		27B53E7B26609E730038D0EA /* convert_scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_scale.h; sourceTree = "<group>"; };
 		518F39211BAEB500004A9A2B /* libyuv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libyuv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		518F39241BAEB500004A9A2B /* libyuv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libyuv.h; sourceTree = "<group>"; };
 		518F39261BAEB500004A9A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				518F39871BAEB5AF004A9A2B /* convert_from_argb.h */,
 				518F39881BAEB5AF004A9A2B /* convert_from.h */,
 				518F39891BAEB5AF004A9A2B /* convert.h */,
+				27B53E7B26609E730038D0EA /* convert_scale.h */,
 				518F398A1BAEB5AF004A9A2B /* cpu_id.h */,
 				518F398B1BAEB5AF004A9A2B /* mjpeg_decoder.h */,
 				518F398C1BAEB5AF004A9A2B /* planar_functions.h */,
@@ -330,6 +335,7 @@
 				518F39311BAEB581004A9A2B /* compare_neon64.cc */,
 				518F39321BAEB581004A9A2B /* compare_win.cc */,
 				518F39331BAEB581004A9A2B /* convert.cc */,
+				27B53E7826609E510038D0EA /* convert_scale.cc */,
 				518F39341BAEB581004A9A2B /* convert_argb.cc */,
 				518F39351BAEB581004A9A2B /* convert_from.cc */,
 				518F39361BAEB581004A9A2B /* convert_from_argb.cc */,
@@ -423,6 +429,7 @@
 				518F39A41BAEB5AF004A9A2B /* scale_argb.h in Headers */,
 				518F39971BAEB5AF004A9A2B /* compare_row.h in Headers */,
 				518F399E1BAEB5AF004A9A2B /* mjpeg_decoder.h in Headers */,
+				27B53E7C26609E730038D0EA /* convert_scale.h in Headers */,
 				518F39A21BAEB5AF004A9A2B /* rotate.h in Headers */,
 				518F399A1BAEB5AF004A9A2B /* convert_from_argb.h in Headers */,
 				78617B08265FB69E00999737 /* scale_uv.h in Headers */,
@@ -620,6 +627,7 @@
 				78617B1E265FB73300999737 /* scale_msa.cc in Sources */,
 				78617B0E265FB71300999737 /* compare_mmi.cc in Sources */,
 				518F39691BAEB581004A9A2B /* rotate.cc in Sources */,
+				27B53E7926609E510038D0EA /* convert_scale.cc in Sources */,
 				518F39631BAEB581004A9A2B /* convert_to_argb.cc in Sources */,
 				518F39711BAEB581004A9A2B /* rotate_win.cc in Sources */,
 				78617B14265FB71F00999737 /* rotate_msa.cc in Sources */,
