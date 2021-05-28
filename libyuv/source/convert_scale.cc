@@ -9,14 +9,8 @@
  */
 
 #include "libyuv/convert_scale.h"
-#include "libyuv/convert.h"
-#include "libyuv/basic_types.h"
-#include "libyuv/cpu_id.h"
+
 #include "libyuv/planar_functions.h"
-#include "libyuv/rotate.h"
-#include "libyuv/row.h"
-#include <vector>
-#include "libyuv/scale.h"     // For ScalePlane()
 #include "libyuv/scale_uv.h"  // For UVScale()
 
 #ifdef __cplusplus

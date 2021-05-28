@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27B53E7926609E510038D0EA /* convert_scale.cc in Sources */ = {isa = PBXBuildFile; fileRef = 27B53E7826609E510038D0EA /* convert_scale.cc */; };
-		27B53E7C26609E730038D0EA /* convert_scale.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B53E7B26609E730038D0EA /* convert_scale.h */; };
+		27B53E7C26609E730038D0EA /* convert_scale.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B53E7B26609E730038D0EA /* convert_scale.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		518F39251BAEB500004A9A2B /* libyuv.h in Headers */ = {isa = PBXBuildFile; fileRef = 518F39241BAEB500004A9A2B /* libyuv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		518F39581BAEB581004A9A2B /* compare.cc in Sources */ = {isa = PBXBuildFile; fileRef = 518F392D1BAEB581004A9A2B /* compare.cc */; };
 		518F39591BAEB581004A9A2B /* compare_common.cc in Sources */ = {isa = PBXBuildFile; fileRef = 518F392E1BAEB581004A9A2B /* compare_common.cc */; };

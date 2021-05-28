@@ -8,17 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#ifndef INCLUDE_LIBYUV_CONVERT_H_
-#define INCLUDE_LIBYUV_CONVERT_H_
+#ifndef INCLUDE_LIBYUV_CONVERT_SCALE_H_
+#define INCLUDE_LIBYUV_CONVERT_SCALE_H_
 
-#include "libyuv/basic_types.h"
-
-#include "libyuv/rotate.h"  // For enum RotationMode.
-#include "libyuv/convert.h"
-// TODO(fbarchard): fix WebRTC source to include following libyuv headers:
-#include "libyuv/convert_argb.h"      // For WebRTC I420ToARGB. b/620
-#include "libyuv/convert_from.h"      // For WebRTC ConvertFromI420. b/620
-#include "libyuv/planar_functions.h"  // For WebRTC I420Rect, CopyPlane. b/618
+#include <vector>
 
 #ifdef __cplusplus
 namespace libyuv {
