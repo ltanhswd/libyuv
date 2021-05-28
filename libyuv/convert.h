@@ -602,6 +602,10 @@ int Android420ToI420(const uint8_t* src_y,
                      int width,
                      int height);
 
+//Resize uv plane
+LIBYUV_API
+uint8_t* ResizeData(int src_uv_width, int src_uv_height);
+
 // ARGB little endian (bgra in memory) to I420.
 LIBYUV_API
 int ARGBToI420(const uint8_t* src_argb,

@@ -3142,6 +3142,15 @@ int Android420ToI420(const uint8_t* src_y,
   return 0;
 }
 
+//Resize uv plane
+LIBYUV_API
+  uint8_t* ResizeData(int src_uv_width, int src_uv_height) {
+    std::vector<uint8_t> tmp_uv_planes_;
+    tmp_uv_planes_.resize(src_uv_width * src_uv_height * 2);
+    tmp_uv_planes_.shrink_to_fit();
+    return tmp_uv_planes_.data()
+  }
+
 #ifdef __cplusplus
 }  // extern "C"
 }  // namespace libyuv
