@@ -13,6 +13,8 @@
 
 #include "libyuv/basic_types.h"
 
+#include "vector"
+
 #include "libyuv/rotate.h"  // For enum RotationMode.
 
 // TODO(fbarchard): fix WebRTC source to include following libyuv headers:
@@ -602,10 +604,6 @@ int Android420ToI420(const uint8_t* src_y,
                      int width,
                      int height);
 
-//Resize uv plane
-LIBYUV_API
-uint8_t* ResizeData(int src_uv_width, int src_uv_height);
-
 // ARGB little endian (bgra in memory) to I420.
 LIBYUV_API
 int ARGBToI420(const uint8_t* src_argb,
@@ -855,6 +853,32 @@ int ConvertToI420(const uint8_t* sample,
                   int crop_height,
                   enum RotationMode rotation,
                   uint32_t fourcc);
+
+// Helper class for directly converting and scaling NV12 to I420. The Y-plane
+// will be scaled directly to the I420 destination, which makes this faster
+// than separate NV12->I420 + I420->I420 scaling.
+class NV12ToI420Scaler {
+ public:
+  NV12ToI420Scaler();
+  ~NV12ToI420Scaler();
+  void NV12ToI420Scale(const uint8_t* src_y,
+                       int src_stride_y,
+                       const uint8_t* src_uv,
+                       int src_stride_uv,
+                       int src_width,
+                       int src_height,
+                       uint8_t* dst_y,
+                       int dst_stride_y,
+                       uint8_t* dst_u,
+                       int dst_stride_u,
+                       uint8_t* dst_v,
+                       int dst_stride_v,
+                       int dst_width,
+                       int dst_height);
+
+ private:
+  std::vector<uint8_t> tmp_uv_planes_;
+};
 
 #ifdef __cplusplus
 }  // extern "C"
